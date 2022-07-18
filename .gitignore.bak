@@ -1,0 +1,4 @@
+F://pig_healthy//code//pig_detect//yolov4_pytorch//img//*.jpg
+F://pig_healthy//code//pig_detect//yolov4_pytorch//logs//*
+F://pig_healthy//code//pig_detect//yolov4_pytorch//img_out//*.png
+F://pig_healthy//code//pig_detect//yolov4_pytorch//VOCdevkit//VOC2007//*
