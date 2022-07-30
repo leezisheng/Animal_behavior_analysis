@@ -122,21 +122,21 @@ if __name__ == "__main__":
     IMG_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\JPEGImages"
     XML_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Annotations"
 
-    AUG_XML_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\AUG_Annotions"  # 存储增强后的XML文件夹路径
+    AUG_XML_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Aug_JPEGImages"  # 存储增强后的XML文件夹路径
     try:
         shutil.rmtree(AUG_XML_DIR)
     except FileNotFoundError as e:
         a = 1
     mkdir(AUG_XML_DIR)
 
-    AUG_IMG_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\AUG_JPEGImages"  # 存储增强后的影像文件夹路径
+    AUG_IMG_DIR = "F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Aug_JPEGImages"  # 存储增强后的影像文件夹路径
     try:
         shutil.rmtree(AUG_IMG_DIR)
     except FileNotFoundError as e:
         a = 1
     mkdir(AUG_IMG_DIR)
 
-    AUGLOOP = 5  # 每张影像增强的数量
+    AUGLOOP = 2  # 每张影像增强的数量
 
     boxes_img_aug_list = []
     new_bndbox = []

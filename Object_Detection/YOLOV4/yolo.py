@@ -19,9 +19,9 @@ from .utils.utils import non_max_suppression, bbox_iou, DecodeBox,letterbox_imag
 #--------------------------------------------#
 class YOLO(object):
     _defaults = {
-        "model_path":   'F:/pig_healthy/code/pig_detect/YOLOV4/model_data/best_epoch_weights.pth',
-        "anchors_path": 'F:/pig_healthy/code/pig_detect/YOLOV4/model_data/yolo_anchors.txt',
-        "classes_path": 'F:/pig_healthy/code/pig_detect/YOLOV4/model_data/voc_classes.txt',
+        "model_path":   'F:\\Animal_behavior_analysis\\Object_Detection\\YOLOV4\\model_data\\best_epoch_weights.pth',
+        "anchors_path": 'F:\\Animal_behavior_analysis\\Object_Detection\\YOLOV4\\model_data\\yolo_anchors.txt',
+        "classes_path": 'F:\\Animal_behavior_analysis\\Object_Detection\\YOLOV4\\model_data\\voc_classes.txt',
         "model_image_size" : (416, 416, 3),
         "confidence": 0.5,
         "iou" : 0.3,

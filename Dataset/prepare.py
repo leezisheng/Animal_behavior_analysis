@@ -9,8 +9,8 @@ import xml.dom.minidom
 import argparse
 
 def main():
-    img_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\JPEGImages'+'\\'
-    anno_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Annotations'+'\\'
+    img_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\AUG_JPEGImages'+'\\'
+    anno_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\AUG_Annotions'+'\\'
     cut_path = 'F:\\Animal_behavior_analysis\\Dataset\\ReID_dataset\\temp_dataset'+'\\'
     
     if not os.path.exists(cut_path):

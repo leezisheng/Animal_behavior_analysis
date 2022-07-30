@@ -8,6 +8,7 @@ import xml.dom.minidom
 file_path = "F:\\pig_healthy\\code\\train_model\\yolov4_pytorch\\VOCdevkit\\VOC2007\\Annotations"
 files = os.listdir(file_path)  # 得到文件夹下所有文件名称
 s = []
+
 for xmlFile in files:  # 遍历文件夹
     if not os.path.isdir(xmlFile):  # 判断是否是文件夹,不是文件夹才打开
         print(xmlFile)

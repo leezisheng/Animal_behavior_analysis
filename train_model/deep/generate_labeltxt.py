@@ -41,22 +41,12 @@ def get_files_list(dir):
             curr_file = parent.split(os.sep)[-1]
 
             #根据class名确定labels
-            if curr_file == "pig0":
+            if curr_file   == "mouse0":
                 labels = 0
-            elif curr_file == "pig1":
+            elif curr_file == "mouse1":
                 labels = 1
-            elif curr_file == "pig2":
+            elif curr_file == "mouse2":
                 labels = 2
-            elif curr_file == "pig3":
-                labels = 3
-            elif curr_file == "pig4":
-                labels = 4
-            elif curr_file == "pig5":
-                labels = 5
-            elif curr_file == "pig6":
-                labels = 6
-            elif curr_file == "pig7":
-                labels = 7
 
             dir_path = parent.replace('\\','/').split('/')[-2]
 
@@ -72,15 +62,15 @@ def get_files_list(dir):
 
 if __name__ == '__main__':
 
-    root_path='F:\\pig_healthy\\code\\train_model\\deep\\data'+'\\'
+    root_path='F:\\Animal_behavior_analysis\\train_model\\deep\\data'+'\\'
 
-    train_dir = './data/train'
-    train_txt = './data/train.txt'
+    train_dir = '.\\data\\train'
+    train_txt = '.\\data\\train.txt'
     train_data = get_files_list(train_dir)
     write_txt(train_data, train_txt, mode='w')
 
-    test_dir = './data/test'
-    test_txt = './data/test.txt'
+    test_dir = '.\\data\\test'
+    test_txt = '.\\data\\test.txt'
     test_data = get_files_list(test_dir)
     write_txt(test_data, test_txt, mode='w')
 

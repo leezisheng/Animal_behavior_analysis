@@ -69,7 +69,7 @@ train_data = MyDataset(txt_path=valid_txt_path, transform=transform_train)
 trainloader = DataLoader(dataset=train_data, batch_size=train_bs, shuffle=True)
 testloader = DataLoader(dataset=valid_data, batch_size=valid_bs)
 
-classes = ('pig0', 'pig1', 'pig2', 'pig3', 'pig4', 'pig5', 'pig6', 'pig7')
+classes = ('mouse0', 'mouse1', 'mouse2')
 
 num_classes = len(classes)
 

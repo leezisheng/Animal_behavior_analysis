@@ -40,8 +40,8 @@ def read_image(image_path, filename):
     return im_info
  
 if __name__ == '__main__':
-    image_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\JPEGImages'+'\\'
-    xml_path   = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Annotations'+'\\'
+    image_path = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Aug_JPEGImages'+'\\'
+    xml_path   = 'F:\\Animal_behavior_analysis\\Dataset\\img_dataset\\Aug_Annotations'+'\\'
     filenamess = os.listdir(xml_path)
     filenames = []
     for name in filenamess:
