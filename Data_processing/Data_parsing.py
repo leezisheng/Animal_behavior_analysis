@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 '''
 @Project ：code 
-@File    ：Data_parsing.py , 对output文件夹下保存生猪运动点的txt文件进行解析
+@File    ：Data_parsing.py , 对output文件夹下保存Object运动点的txt文件进行解析
 @Author  ：leeqingshui
 @Date    ：2022/6/21 2:36 
 '''
@@ -64,10 +64,10 @@ def Data_format_trans(line_list):
     return line_data_list
 
 '''
-@ 函数功能                         : 查看id号代表的某头猪的运动轨迹列表
+@ 函数功能                         : 查看id号代表的某Object的运动轨迹列表
 @ 入口参数 {list}  line_data_list  : 存放每一行数据的二维列表，列表中元素为一维列表
 @                                   数据格式为[[{frame},{id},{x1},{y1},{w},{h},-1,-1,-1,-1],...]
-@ 返回参数 {list}  move_data_list  : 存放对应id号生猪的运动轨迹数据的列表
+@ 返回参数 {list}  move_data_list  : 存放对应id号Object的运动轨迹数据的列表
 '''
 def Get_move_data(line_data_list , id):
     # 存放运动轨迹数据的列表

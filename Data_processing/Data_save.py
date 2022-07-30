@@ -10,9 +10,9 @@ import pandas as pd
 
 '''
 @ 函数功能                                 ：将三个列表合并后保存到csv文件中
-@ 入口参数 {list}   average_distance_list  ：生猪运动距离数据列表
-@ 入口参数 {list}   average_speed_list     ：生猪运动速度数据列表
-@ 入口参数 {list}   average_acc_list       ：生猪运动加速度数据列表
+@ 入口参数 {list}   average_distance_list  ：Object运动距离数据列表
+@ 入口参数 {list}   average_speed_list     ：Object运动速度数据列表
+@ 入口参数 {list}   average_acc_list       ：Object运动加速度数据列表
 @ 入口参数 {str}    save_path              ：csv文件保存地址
 '''
 def dataset_save(average_distance_list , average_speed_list, average_acc_list, save_path):
@@ -32,8 +32,3 @@ def dataset_save(average_distance_list , average_speed_list, average_acc_list, s
     tet = pd.DataFrame(data=save_list)
     tet.to_csv(save_path)
     print(len(temp_save_list))
-
-
-
-
-

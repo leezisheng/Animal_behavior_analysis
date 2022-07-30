@@ -13,14 +13,14 @@ import numpy as np
 FPS = 10
 time = FPS/30
 '''
-@ 函数功能                          ：输出固定序号生猪的质心运动列表
+@ 函数功能                          ：输出固定序号对象的质心运动列表
 @ 入口参数 {list}  move_data_list   ：运动轨迹列表,数据格式为:
 @                                    [[{frame},{id},{x1},{y1},{w},{h},-1,-1,-1,-1],...]
 @ 返回参数 {list}  center_move_list ：生猪质心运动列表，数据格式：
 @                                    [[{frame},{x_center},{y_center}],...]
 '''
 def Get_CenterMoveData_List(move_data_list):
-    # 生猪质心运动列表
+    # 对象质心运动列表
     center_move_list = []
 
     for move_data in move_data_list:
@@ -53,10 +53,10 @@ def Get_CenterMoveData_List(move_data_list):
     return center_move_list
 
 '''
-@ 函数功能                            ：输出固定序号生猪每一帧的质心位移列表
+@ 函数功能                            ：输出固定序号对象每一帧的质心位移列表
 @ 入口参数 {list}  center_move_list   ：运动轨迹列表,数据格式为:
 @                                      [[{frame},{x_center},{y_center}],...]
-@ 返回参数 {list}  move_distance_list ：生猪质心运动列表，数据格式：
+@ 返回参数 {list}  move_distance_list ：对象质心运动列表，数据格式：
 @                                      [[{Next_frame},{move_distance}],...]
 '''
 def Get_MoveDistance_List(center_move_list):
@@ -126,10 +126,10 @@ def Get_total_distance(move_distance_list):
     return total_distance
 
 '''
-@ 函数功能                            ：输出固定序号生猪相邻两帧的瞬时速度
-@ 入口参数 {list}  move_distance_list ：生猪质心运动列表，数据格式：
+@ 函数功能                            ：输出固定序号对象相邻两帧的瞬时速度
+@ 入口参数 {list}  move_distance_list ：对象质心运动列表，数据格式：
 @                                      [[{Next_frame},{move_distance}],...]
-@ 返回参数 {list}  move_speed_list    ：生猪运动速度列表，数据格式：
+@ 返回参数 {list}  move_speed_list    ：对象运动速度列表，数据格式：
 @                                      [[{Next_frame},{move_speed}],...]
 '''
 def Get_MoveSpeed_List(move_distance_list):
@@ -171,10 +171,10 @@ def Get_Average_Speed(move_distance_list, total_distance):
     return average_speed
 
 '''
-@ 函数功能                             ：输出固定序号生猪相邻两帧的加速度列表
-@ 入口参数 {list}  move_speed_list     ：生猪运动速度列表，数据格式：
+@ 函数功能                             ：输出固定序号对象相邻两帧的加速度列表
+@ 入口参数 {list}  move_speed_list     ：对象运动速度列表，数据格式：
 @                                       [[{Next_frame},{move_speed}],...]
-@ 返回参数 {list}  move_acc_list       ：生猪运动加速度列表，数据格式：
+@ 返回参数 {list}  move_acc_list       ：对象运动加速度列表，数据格式：
 @                                       [[{Next_frame},{move_acc}],...]
 '''
 def Get_Acc_List(move_speed_list):
@@ -209,7 +209,7 @@ def Get_Acc_List(move_speed_list):
 
 '''
 @ 函数功能                            ：计算移动平均加速度
-@ 入口参数 {list}   move_acc_list     ：生猪运动加速度列表，数据格式：
+@ 入口参数 {list}   move_acc_list     ：对象运动加速度列表，数据格式：
 @                                       [[{Next_frame},{move_acc}],...]
 @ 返回参数 {float}  average_acc       ：平均加速度
 '''
@@ -234,7 +234,7 @@ def Get_Average_Acc(move_acc_list):
 
 '''
 @ 函数功能                         ：求最大值
-@ 入口参数 {list}   move_info_list ：生猪运动加速度列表，数据格式：
+@ 入口参数 {list}   move_info_list ：对象运动加速度列表，数据格式：
 @                                   [[{Next_frame},{move_info}],...]
 @ 返回参数 {float}  max_value      ：平均加速度
 '''
@@ -246,8 +246,3 @@ def Get_MaxValue(move_info_list):
         temp_info_value.append(data[1])
 
     return(max(temp_info_value))
-
-
-
-
-
